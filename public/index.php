@@ -1,6 +1,8 @@
 <?php
-//เพิ่มในส่วนส่วนนี้เพื่อให้ใช้เป็น api ได้
-header("Access-Control-Allow-Origin:*");
+//เพิ่มในส่วนส่วนนี้เพื่อให้ใช้เป็น api ได้ เพิ่อจะตั้งค่าการใช้งาน
+header("Access-Control-Allow-Origin:*"); //ใครบ้างที่สามารถใช้ Api นี้ได้ ถ้า * คือทุกคนสามารถเข้าถึงได้
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE"); //ให้สามารถใช้งานฟังชั่น GET POST PUT DELETE ในการแก้ไขฐานข้อมูลได้
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, X-Requested-With");//header แบบไหนที่สามารถส่งเข้ามาได้บ้าง
 //
 
 if (PHP_SAPI == 'cli-server') {
